@@ -18,6 +18,8 @@ variables that you set up in the .env file*/
  const api_key = process.env.API_KEY;
  const api_url = process.env.API_URL;
 
+const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
+const { IamAuthenticator } = require('ibm-watson/auth');
 function getNLUInstance() {
     const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
         version: '2021-08-01',
